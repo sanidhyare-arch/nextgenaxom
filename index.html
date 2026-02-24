@@ -13,6 +13,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -26,36 +27,49 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 80px;
+padding:20px 8%;
 background:#0a0f1c;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-/* TOP LOGO */
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
 
 .logo-img{
-height:80px;
-filter: drop-shadow(0 0 20px #00f2ff)
-        drop-shadow(0 0 40px #00f2ff);
+height:70px;
+filter: drop-shadow(0 0 20px #00f2ff);
 }
 
 /* HERO */
 
 .hero{
+height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:80px;
 text-align:center;
+flex-direction:column;
+background:radial-gradient(circle,#00f2ff22,#0a0f1c);
 }
 
 .hero h1{
 font-size:55px;
-line-height:1.2;
 }
 
 .hero span{
 color:#00f2ff;
-text-shadow:0 0 30px #00f2ff;
+text-shadow:0 0 25px #00f2ff;
 }
 
 .hero button{
@@ -71,7 +85,7 @@ font-weight:600;
 /* COURSES */
 
 .courses{
-padding:50px;
+padding:80px 8%;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
@@ -79,23 +93,23 @@ gap:30px;
 
 .card{
 background:rgba(255,255,255,0.05);
+padding:30px;
 border-radius:20px;
-padding:20px;
+text-align:center;
 backdrop-filter:blur(20px);
 box-shadow:0 0 20px #00f2ff40;
 transition:0.3s;
-text-align:center;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-10px);
 box-shadow:0 0 40px #00f2ff;
 }
 
 /* CONTACT */
 
 .contact{
-padding:80px;
+padding:80px 8%;
 text-align:center;
 }
 
@@ -118,78 +132,112 @@ cursor:pointer;
 /* BOTTOM LOGO */
 
 .bottom-logo{
-text-align:center;
-margin-top:60px;
+margin-top:50px;
 }
 
 .logo-bottom{
-height:110px;
-filter: drop-shadow(0 0 25px #00f2ff)
-        drop-shadow(0 0 50px #00f2ff);
+height:100px;
+filter: drop-shadow(0 0 25px #00f2ff);
+}
+
+/* FOOTER */
+
+footer{
+padding:30px;
+text-align:center;
+background:#050810;
+margin-top:50px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 0 15px #25D366;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:35px;}
+input,textarea{width:95%;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR (Logo Same Thakibo) -->
+<!-- NAVBAR -->
 <nav>
 <img src="logo.png" class="logo-img">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<div>
-<h1>Learn <span>Power BI</span><br>SQL & AI</h1>
-<button>Start Learning</button>
-</div>
+<h1>Master <span>Power BI</span>, SQL & AI</h1>
+<a href="#contact"><button>Enroll Now</button></a>
 </section>
 
 <!-- COURSES -->
-<section class="courses">
+<section id="courses" class="courses">
 
 <div class="card">
-<h2>Power BI Mastery</h2>
-<p>Learn Dashboard Building</p>
+<h2>Power BI</h2>
+<p>Interactive Dashboards</p>
 </div>
 
 <div class="card">
-<h2>SQL Beginner to Pro</h2>
-<p>Database Management</p>
+<h2>SQL</h2>
+<p>Database & Query Mastery</p>
 </div>
 
 <div class="card">
-<h2>AI Tools Training</h2>
-<p>ChatGPT Automation</p>
+<h2>AI Tools</h2>
+<p>Automation & ChatGPT</p>
 </div>
 
 </section>
 
-<!-- CONTACT WITH BACKEND -->
-<section class="contact">
+<!-- CONTACT -->
+<section id="contact" class="contact">
 <h1>Enroll Now</h1>
 
 <form action="https://formsubmit.co/sanidhya.re@gmail.com" method="POST">
-
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://sanidhyare-arch.github.io/nextgenaxom/">
 
 <input type="text" name="Name" placeholder="Your Name" required><br>
 <input type="email" name="Email" placeholder="Your Email" required><br>
 <input type="text" name="Phone" placeholder="Phone Number" required><br>
-
 <textarea name="Message" placeholder="Course Name"></textarea><br>
 
 <button class="submit">Submit</button>
-
 </form>
 
-<!-- BOTTOM LOGO (Extra PNG Logo) -->
 <div class="bottom-logo">
 <img src="logo.png" class="logo-bottom">
 </div>
 
 </section>
+
+<footer>
+© 2026 NextGenAxom | Designed by Sanidhya Sarma
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/917002611314" target="_blank">
+Chat on WhatsApp
+</a>
 
 </body>
 </html>
