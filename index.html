@@ -4,15 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NextGen Axom</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{
-background:#0B0F1A;
-color:white;
-overflow-x:hidden;
-}
+body{background:#0B0F1A;color:white;overflow-x:hidden}
 
 /* HERO */
 .hero{
@@ -27,21 +24,14 @@ background:radial-gradient(circle at center,#00E5FF22,#B6FF0022,#000000);
 }
 
 .logo{
-width:140px;
+width:220px;
 margin-bottom:20px;
-filter: drop-shadow(0 0 15px #00E5FF)
-        drop-shadow(0 0 25px #B6FF00);
+filter: drop-shadow(0 0 25px #00E5FF)
+        drop-shadow(0 0 45px #B6FF00);
 }
 
-h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.subtitle{
-color:#00E5FF;
-margin-bottom:40px;
-}
+h1{font-size:45px;margin-bottom:20px}
+.subtitle{color:#00E5FF;margin-bottom:40px}
 
 .btn{
 padding:15px 30px;
@@ -67,38 +57,46 @@ width:300px;
 height:200px;
 padding:20px;
 background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.1);
 border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(20px);
 box-shadow:0 0 30px #00E5FF;
 }
 
-/* SERVICES */
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-padding:40px;
+/* CONTACT */
+.contact{
+padding:60px;
+text-align:center;
 }
 
-.small{
-width:200px;
+input,textarea{
+width:300px;
+margin:10px;
+padding:10px;
+border-radius:10px;
+border:none;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
 padding:15px;
-background:rgba(255,255,255,0.03);
-border-radius:15px;
-border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(20px);
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 0 15px #25D366;
 }
 
-/* FOOTER */
 footer{
 padding:20px;
 text-align:center;
 background:#000;
 }
 </style>
-
 </head>
 
 <body>
@@ -109,11 +107,7 @@ background:#000;
 
 <h1>Empowering You with the DNA of Digital Success</h1>
 
-<p class="subtitle">
-NextGen Axom | Founder: Sanidhya Sarma
-</p>
-
-<div class="btn">Get Started</div>
+<p class="subtitle">NextGen Axom | Founder: Sanidhya Sarma</p>
 
 </section>
 
@@ -131,14 +125,26 @@ NextGen Axom | Founder: Sanidhya Sarma
 
 </section>
 
-<section class="services">
+<section class="contact">
 
-<div class="small">AI Automation</div>
-<div class="small">No-Code Development</div>
-<div class="small">Digital Marketing</div>
-<div class="small">Business Insights</div>
+<h2>Enroll Now</h2>
+
+<form action="https://formsubmit.co/ajax/sanidhya.re@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="name" placeholder="Your Name" required><br>
+<input type="email" name="email" placeholder="Your Email" required><br>
+<input type="text" name="phone" placeholder="Phone Number" required><br>
+<textarea name="message" placeholder="Course Interested"></textarea><br>
+
+<button class="btn">Submit</button>
+
+</form>
 
 </section>
+
+<a href="https://wa.me/917002611314" class="whatsapp">💬</a>
 
 <footer>
 <p>© 2026 NextGen Axom</p>
