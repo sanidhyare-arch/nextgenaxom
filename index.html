@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NextGenAxom</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -32,24 +30,26 @@ padding:20px 80px;
 background:#0a0f1c;
 }
 
-.logo{
-font-size:32px;
-font-weight:700;
-color:#00f2ff;
-text-shadow:0 0 20px #00f2ff;
+/* TOP LOGO */
+
+.logo-img{
+height:80px;
+filter: drop-shadow(0 0 20px #00f2ff)
+        drop-shadow(0 0 40px #00f2ff);
 }
 
 /* HERO */
 
 .hero{
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
 padding:80px;
+text-align:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:55px;
 line-height:1.2;
 }
 
@@ -59,7 +59,7 @@ text-shadow:0 0 30px #00f2ff;
 }
 
 .hero button{
-margin-top:20px;
+margin-top:25px;
 padding:15px 40px;
 background:#00f2ff;
 border:none;
@@ -84,6 +84,7 @@ padding:20px;
 backdrop-filter:blur(20px);
 box-shadow:0 0 20px #00f2ff40;
 transition:0.3s;
+text-align:center;
 }
 
 .card:hover{
@@ -111,17 +112,32 @@ background:#00f2ff;
 padding:15px 40px;
 border:none;
 border-radius:50px;
+cursor:pointer;
 }
 
+/* BOTTOM LOGO */
+
+.bottom-logo{
+text-align:center;
+margin-top:60px;
+}
+
+.logo-bottom{
+height:110px;
+filter: drop-shadow(0 0 25px #00f2ff)
+        drop-shadow(0 0 50px #00f2ff);
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR (Logo Same Thakibo) -->
 <nav>
-<div class="logo">NEXTGENAXOM</div>
+<img src="logo.png" class="logo-img">
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div>
 <h1>Learn <span>Power BI</span><br>SQL & AI</h1>
@@ -129,6 +145,7 @@ border-radius:50px;
 </div>
 </section>
 
+<!-- COURSES -->
 <section class="courses">
 
 <div class="card">
@@ -148,10 +165,14 @@ border-radius:50px;
 
 </section>
 
+<!-- CONTACT WITH BACKEND -->
 <section class="contact">
 <h1>Enroll Now</h1>
 
 <form action="https://formsubmit.co/sanidhya.re@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://sanidhyare-arch.github.io/nextgenaxom/">
 
 <input type="text" name="Name" placeholder="Your Name" required><br>
 <input type="email" name="Email" placeholder="Your Email" required><br>
@@ -162,6 +183,11 @@ border-radius:50px;
 <button class="submit">Submit</button>
 
 </form>
+
+<!-- BOTTOM LOGO (Extra PNG Logo) -->
+<div class="bottom-logo">
+<img src="logo.png" class="logo-bottom">
+</div>
 
 </section>
 
